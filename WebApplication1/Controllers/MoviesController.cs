@@ -9,7 +9,7 @@ namespace WebApplication1.Controllers
 {
     public class MoviesController : Controller
     {
-        // GET: Movies
+        // GET: Movies/Random
         public ActionResult Random()
         {
             var movie = new Movie() { Name = "Shrek!" };
@@ -26,6 +26,11 @@ namespace WebApplication1.Controllers
             return Content("movieId=" + id);
         }
 
+        public ActionResult ByReleaseDate(int year, int month)
+        {
+            return Content(year + "/" + month);
+        }
+
         //movies
         public ActionResult Index(int? pageIndex, string sortBy)
         {
@@ -37,5 +42,7 @@ namespace WebApplication1.Controllers
 
             return Content(String.Format("PageIndex={0} & sortBy={1}", pageIndex, sortBy));
         }
+
+       
     }
 }
