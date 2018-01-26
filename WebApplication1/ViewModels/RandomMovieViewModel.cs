@@ -12,4 +12,4 @@ namespace WebApplication1.ViewModels
        
         public List<Customer> Customers { get; set; }
     }
-}
+}/////
