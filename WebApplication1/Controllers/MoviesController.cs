@@ -54,7 +54,7 @@ namespace WebApplication1.Controllers
         }
 
 
-        [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]
+        [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")] // new route
         public ActionResult ByReleaseDate(int year, int month)
         {
             return Content(year + "/" + month);
